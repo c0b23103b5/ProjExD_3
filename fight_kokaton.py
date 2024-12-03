@@ -166,15 +166,15 @@ class Score:
 
 def main():
     pg.display.set_caption("たたかえ！こうかとん")
-    screen = pg.display.set_mode((WIDTH, HEIGHT))    
-    bg_img = pg.image.load("fig/pg_bg.jpg")
-    bird = Bird((300, 200))
-    bomb = Bomb((255, 0, 0), 10)
-    beam = None
-    bombs = [Bomb((255, 0, 0), 10) for _ in range(NUM_OF_BOMBS)]
-    beams = []
-    score = Score()
-    clock = pg.time.Clock()
+    screen = pg.display.set_mode((WIDTH, HEIGHT))
+    bg_img = pg.image.load("fig/pg_bg.jpg") # 背景画像読み込み
+    bird = Bird((300, 200)) # こうかとんのクラス
+    bomb = Bomb((255, 0, 0), 10) #爆弾クラス
+    beam = None # ビーム
+    bombs = [Bomb((255, 0, 0), 10) for _ in range(NUM_OF_BOMBS)] # 複数のボムの軌道
+    beams = [] # 複数のビーム保存リスト
+    score = Score() # スコアクラス
+    clock = pg.time.Clock() 
     tmr = 0
 
     while True:
