@@ -170,7 +170,7 @@ def main():
     bg_img = pg.image.load("fig/pg_bg.jpg") # 背景画像読み込み
     bird = Bird((300, 200)) # こうかとんのクラス
     bomb = Bomb((255, 0, 0), 10) #爆弾クラス
-    beam = None # ビーム
+    beam = None # ビームの関数
     bombs = [Bomb((255, 0, 0), 10) for _ in range(NUM_OF_BOMBS)] # 複数のボムの軌道
     beams = [] # 複数のビーム保存リスト
     score = Score() # スコアクラス
